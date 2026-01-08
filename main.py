@@ -254,7 +254,7 @@ def contact_handler(message):
     code = get_code(phone)
 
     if code == "NO_CODE":
-        bot.edit_message_text("❗ Bu raqam uchun kod yaratilmagan!", message.chat.id, wait.message_id)
+        bot.edit_message_text("❗ Bu raqam uchun kod yaratilmagan!\n\nWeb saytda kiritilgan raqam bilan telegramdagi raqam bir xil bolishi kere !", message.chat.id, wait.message_id)
     elif code == "API_ERROR":
         bot.edit_message_text("❌ API xatosi!", message.chat.id, wait.message_id)
     else:
@@ -388,3 +388,4 @@ def handle_broadcast(message):
 # 📌 START BOT
 # ===========================
 bot.infinity_polling()
+
